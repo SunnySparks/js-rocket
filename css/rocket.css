@@ -1,0 +1,113 @@
+body {
+	font-family: 'helvetica', 'arial', sans-serif;
+}
+
+h1{
+	color: pink;
+}
+
+.left{
+background: url(../img/diamond.jpg);
+background-size: cover;
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+
+}
+
+a.button{
+	display: inline-block;
+	background: url(../img/button2.png);
+	background-size: cover;
+	color: black;
+	padding: /*20px 40px*/;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
+	position: relative;
+	top: 120px;
+
+}
+
+a:hover{
+	color: black;
+}
+
+.right{
+	background: url(../img/Space.gif);
+	background-size: cover;
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	right: 0;
+
+}
+.ground{
+	background: url('../img/Planet.png') no-repeat center center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 280px;
+}
+.rocket {
+	position: absolute;
+	left: 50%;
+	bottom: 11px;
+	width: 171px;
+	height: 293px;
+	margin-left: -71.5px; 
+	background: url('../img/Legs-idle.png') no-repeat 00;
+	transition: bottom 10000ms;
+}
+/* rocket bg image*/
+body.body-state2 .rocket{
+	background-image: url('../img/legs-ignite1.gif');	
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/legs-blastOff1.gif');
+}
+body.body-state5 .rocket{
+	background-image: url('../img/legs-explode1.gif');
+}
+
+body.body-state1 .rocket{
+	transition: none;
+}
+
+
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	bottom: 1000px;
+
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5{
+	display: none;
+}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+
+a{
+bottom: 0;
+}
